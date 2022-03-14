@@ -16,6 +16,10 @@ import figure from './objects/figure'
 import projectMember from './objects/projectMember'
 import projectPortableText from './objects/projectPortableText'
 import simplePortableText from './objects/simplePortableText'
+import gallery from './objects/gallery'
+import imageWithText from './objects/imageWithText'
+import featuredClasses from './objects/featuredClasses'
+import featuredClass from './objects/featuredClass'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,9 +32,13 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     bioPortableText,
     figure,
+    gallery,
+    imageWithText,
     projectMember,
     projectPortableText,
     simplePortableText,
+    featuredClasses,
+    featuredClass,
     // The following are document types which will appear
     // in the studio.
     category,

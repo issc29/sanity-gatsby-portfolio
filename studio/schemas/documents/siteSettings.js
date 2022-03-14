@@ -36,6 +36,27 @@ export default {
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
       to: [{type: 'person'}]
+    },
+    {
+      name: 'logo',
+      title: 'Logo',
+      type: 'figure'
+    },
+    {
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'gallery'
+    },
+    {
+      name: 'featuredClasses',
+      title: 'Featured Classes',
+      type: 'featuredClasses'
+    },
+    {
+      title: 'Latest News', 
+      name: 'latestNews',
+      type: 'array', 
+      of: [{type: 'block'}]
     }
   ]
 }
