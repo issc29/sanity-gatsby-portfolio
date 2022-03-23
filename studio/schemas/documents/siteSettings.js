@@ -57,6 +57,24 @@ export default {
       name: 'latestNews',
       type: 'array', 
       of: [{type: 'block'}]
+    },
+    {
+      title: 'About Hakham Faur', 
+      name: 'aboutHakham',
+      type: 'array', 
+      of: [{type: 'block'}]
+    },
+    {
+      title: 'About Yafe Beito', 
+      name: 'aboutYafeBeito',
+      type: 'array', 
+      of: [{type: 'block'}]
+    },
+    {
+      title: "Hakham Faur's Books", 
+      name: 'booksText',
+      type: 'array', 
+      of: [{type: 'block'}]
     }
   ]
 }

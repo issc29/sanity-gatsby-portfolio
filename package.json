@@ -17,6 +17,8 @@
     "lerna": "^4.0.0"
   },
   "dependencies": {
-    "@sanity/image-url": "^1.0.1"
+    "@sanity/image-url": "^1.0.1",
+    "get-youtube-id": "^1.0.1",
+    "react-youtube": "^7.14.0"
   }
 }
