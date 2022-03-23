@@ -20,6 +20,8 @@ import gallery from './objects/gallery'
 import imageWithText from './objects/imageWithText'
 import featuredClasses from './objects/featuredClasses'
 import featuredClass from './objects/featuredClass'
+import youtube from './objects/youtube'
+import blogArticles from './documents/blogArticles'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -39,11 +41,13 @@ export default createSchema({
     simplePortableText,
     featuredClasses,
     featuredClass,
+    youtube,
     // The following are document types which will appear
     // in the studio.
     category,
     person,
     sampleProject,
-    siteSettings
+    siteSettings,
+    blogArticles
   ])
 })
