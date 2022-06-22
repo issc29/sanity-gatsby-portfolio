@@ -9,6 +9,7 @@ import category from './documents/category'
 import person from './documents/person'
 import sampleProject from './documents/sampleProject'
 import siteSettings from './documents/siteSettings'
+import audioTracks from './documents/audioTracks'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
@@ -22,6 +23,7 @@ import featuredClasses from './objects/featuredClasses'
 import featuredClass from './objects/featuredClass'
 import youtube from './objects/youtube'
 import blogArticles from './documents/blogArticles'
+import tag from './documents/tag'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -48,6 +50,8 @@ export default createSchema({
     person,
     sampleProject,
     siteSettings,
-    blogArticles
+    blogArticles,
+    audioTracks,
+    tag
   ])
 })
