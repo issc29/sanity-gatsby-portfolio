@@ -4,6 +4,9 @@
   "version": "1.0.6",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
+  "engines": {
+    "node": ">=17.9.0"
+  },
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
