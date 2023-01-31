@@ -11,6 +11,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'tapeNumber',
+      title: 'Tape Number',
+      type: 'number'
+    },
+    {
       name: 'link',
       title: 'AWS S3 Link',
       description: 'Link to audio file in AWS S3',
