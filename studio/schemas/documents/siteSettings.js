@@ -54,7 +54,7 @@ export default {
     },
     {
       title: 'Display latest news?',
-      name: 'display',
+      name: 'displayLatestNews',
       type: 'boolean'
     },
     {
