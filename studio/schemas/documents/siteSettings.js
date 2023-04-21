@@ -53,6 +53,11 @@ export default {
       type: 'featuredClasses'
     },
     {
+      title: 'Display latest news?',
+      name: 'display',
+      type: 'boolean'
+    },
+    {
       title: 'Latest News', 
       name: 'latestNews',
       type: 'array', 
