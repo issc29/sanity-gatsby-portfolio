@@ -47,9 +47,23 @@ export default function Gallery() {
     isAutoSlideshow: true,
     autoSlideshowInterval: 5,
     slideshowLoop: true,
-
-
   };
+
+  const options2 = {
+        "layoutParams": {
+            "structure": {
+                "galleryLayout": 4
+            }
+        },
+        "behaviourParams": {
+            "gallery": {
+                "horizontal": {
+                    "loop": true
+                }
+            }
+        }
+    }
+        
 
   // The size of the gallery container. The images will fit themselves in it
   const container = {
@@ -85,7 +99,7 @@ export default function Gallery() {
             return (
                 <ProGallery
                 items={items2}
-                options={options}
+                options={options2}
                 container={container}
                 //eventsListener={eventsListener}
               />
