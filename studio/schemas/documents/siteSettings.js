@@ -85,6 +85,15 @@ export default {
     ]
     },
     {
+      title: 'About Classes', 
+      name: 'aboutClasses',
+      type: 'array', 
+      of: [
+        {type: 'block'},
+        {type: 'image'}
+    ]
+    },
+    {
       title: "Hakham Faur's Books", 
       name: 'booksText',
       type: 'array', 
