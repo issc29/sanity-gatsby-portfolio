@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import 'react-h5-audio-player/lib/styles.css';
 import { PlayIcon, PauseIcon } from "@heroicons/react/solid";
 import ReactPlayer from 'react-player'
@@ -7,9 +7,43 @@ import { MdForward10 } from "@react-icons/all-files/md/MdForward10";
 import { MdReplay10 } from "@react-icons/all-files/md/MdReplay10";
 import { isMobile } from 'react-device-detect';
 
+
 const AudioPlayerCustom = (props) => {
   const player = React.useRef()
+  const title = React.useRef();
+  const [playMarquee, setPlayMarquee] = useState(false);
+  const [scrollDistance, setScrollDistance] = useState("0px");
   const trackId = props.Track.id || ""
+
+  const triggerMarquee = (title) => {
+    const { current } = title
+
+    if(current.scrollWidth > current.offsetWidth) {
+      const currentScrollDistance = `-${current.scrollWidth -  current.offsetWidth}px`
+
+      if(scrollDistance == currentScrollDistance) {
+        console.log("Scroll Distance is equal")
+        setPlayMarquee(true)
+          const timeoutId = window.setTimeout(() => {
+            setPlayMarquee(false);
+          }, 6000);
+
+      } else {
+        setScrollDistance(currentScrollDistance)
+      }
+      
+ 
+  }
+
+  }
+
+  useEffect(() => {
+    console.log("a")
+    setPlayMarquee(true)
+      const timeoutId = window.setTimeout(() => {
+        setPlayMarquee(false);
+      }, 6000);
+  }, [scrollDistance])
 
   useEffect(() => {
     if(props.play) {
@@ -23,8 +57,11 @@ const AudioPlayerCustom = (props) => {
       <div
         className="fixed left-0 bottom-0 min-w-full z-10 bg-dark-blue" >
         <div className="relative h-full w-full sm:flex text-center sm:text-left">
-          <div key={props.Track.id} className="flex flex-col md:p-4 p-1 text-white sm:min-w-[150px] whitespace-nowrap overflow-hidden">
-            <div>{props.Track.title}</div>
+          <div key={props.Track.id} className="flex flex-col md:p-4 p-1 text-white sm:w-[300px] whitespace-nowrap overflow-hidden">
+            <div className={`${(playMarquee) ? `animate-marquee [--scroll-distance: ${scrollDistance}]` : ''} `}
+              onMouseEnter={() => triggerMarquee(title)}
+              ref={title}
+            >{props.Track.title}</div>
             <div className="text-xs">{props.Track.artist}</div>
           </div>
 
