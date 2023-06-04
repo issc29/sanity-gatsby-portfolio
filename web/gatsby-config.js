@@ -13,12 +13,13 @@ const clientConfig = require('./client-config')
 const token = process.env.SANITY_READ_TOKEN
 
 const isProd = process.env.NODE_ENV === 'production'
-const indexName = (process.env.ALGOLIA_INDEX) ?  process.env.ALGOLIA_INDEX : `Tracks_DEV`
+const indexName = (process.env.GATSBY_ALGOLIA_INDEX) ?  process.env.GATSBY_ALGOLIA_INDEX : `Tracks_DEV`
 
 module.exports = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify',
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-sanity',
