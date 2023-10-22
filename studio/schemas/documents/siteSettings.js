@@ -110,6 +110,11 @@ export default {
         {type: 'block'},
         {type: 'image'}
     ]
+    },
+    {
+      title: "Donate Link", 
+      name: 'donateLink',
+      type: 'string', 
     }
   ]
 }
