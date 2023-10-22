@@ -101,6 +101,15 @@ export default {
         {type: 'block'},
         {type: 'image'}
     ]
+    },
+    {
+      title: "Donate", 
+      name: 'donate',
+      type: 'array', 
+      of: [
+        {type: 'block'},
+        {type: 'image'}
+    ]
     }
   ]
 }

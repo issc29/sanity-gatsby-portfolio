@@ -10,6 +10,7 @@ import person from './documents/person'
 import sampleProject from './documents/sampleProject'
 import siteSettings from './documents/siteSettings'
 import audioTracks from './documents/audioTracks'
+import donate from './documents/donate'
 
 // Object types
 import bioPortableText from './objects/bioPortableText'
