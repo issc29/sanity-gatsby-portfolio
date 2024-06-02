@@ -35,7 +35,7 @@ export default {
           type: 'block'
         },
         {
-          type: 'youtube'
+          type: 'youtubeVideo'
         }
       ]
     }

@@ -1,8 +1,3 @@
-// First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
-
-// Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import category from './documents/category'
@@ -27,14 +22,7 @@ import blogArticles from './documents/blogArticles'
 import tag from './documents/tag'
 
 // Then we give our schema to the builder and provide the result to Sanity
-export default createSchema({
-  // We name our schema
-  name: 'portfolio',
-  // Then proceed to concatenate our our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
+export default [
     bioPortableText,
     figure,
     gallery,
@@ -54,5 +42,4 @@ export default createSchema({
     blogArticles,
     audioTracks,
     tag
-  ])
-})
+  ]
