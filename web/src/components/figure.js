@@ -6,7 +6,6 @@ import clientConfig from "../../client-config";
 import * as styles from "./figure.module.css";
 
 export function Figure({value}) {
-  //console.log(value)
   if (!value.asset) {
     return null;
   }

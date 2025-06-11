@@ -34,7 +34,6 @@ async function sendEmail(values) {
     })
     return true
   } catch(err) {
-    console.log(err)
     return false
   }
 }

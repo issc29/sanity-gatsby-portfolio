@@ -12,10 +12,8 @@ export const getBreakpointValue = (value) =>
 export const getCurrentBreakpoint = () => {
   let currentBreakpoint = '';
   let biggestBreakpointValue = 0;
-  console.log(fullConfig.theme.screens)
   for (const breakpoint of Object.keys(fullConfig.theme.screens)) {
     const breakpointValue = getBreakpointValue(breakpoint);
-    console.log(window.innerWidth)
     if (
       breakpointValue > biggestBreakpointValue &&
       window.innerWidth >= breakpointValue
@@ -24,6 +22,5 @@ export const getCurrentBreakpoint = () => {
       currentBreakpoint = breakpoint;
     }
   }
-  console.log(currentBreakpoint)
   return currentBreakpoint;
 };

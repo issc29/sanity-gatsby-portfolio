@@ -126,13 +126,8 @@ exports.syncAlgoliaSettings= async function() {
             .initIndex(indexName)
             .setSettings(settings, { forwardToReplicas }, (err, content) => {
               if (err) {
-                console.log(
-                  `X Could not sync settings with Algolia index ${indexName}`
-                );
-              } else
-              console.log(
-                `✔ Successfully synced settings with Algolia index ${indexName}`
-              );
+                throw new Error(`Could not sync settings with Algolia index ${indexName}`);
+              }
             })
   }
 }
